@@ -11,16 +11,27 @@ tracing = { version = "0.1.40" }
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 serde = "1.0"
 
-hex = "0.4.3"
-
 # Fork that is provable
 #reth-primitives = { git = "https://github.com/Sovereign-Labs/reth", rev = "fb971d14f4ed08699f1b627fb6ea2e8522399f4d", default-features = false }
-# For proper compilation of the ^
-alloy-trie = { version = "=0.3.0" }
-alloy-primitives = { version = "=0.6.4" }
+## For proper compilation of the ^
+#alloy-trie = { version = "=0.3.0" }
+#alloy-primitives = { version = "=0.6.4" }
 #revm = { version = "=7.1.0", features = ["serde"], default-features = false }
-revm-primitives = { version = "=3.1.0", default-features = false }
+#revm-primitives = { version = "=3.1.0", default-features = false }
 
 # Last PR for proving was merged
-reth-primitives = { git = "https://github.com/paradigmxyz/reth", rev = "43c72b022cea3068edbce794fa94adefb029fd06", default-features = false }
-#reth-primitives = { git = "https://github.com/paradigmxyz/reth", tag = "v0.2.0-beta.9", default-features = false }
+#reth-primitives = { git = "https://github.com/paradigmxyz/reth", rev = "43c72b022cea3068edbce794fa94adefb029fd06", default-features = false }
+## For proper compilation of the ^
+#alloy-trie = { version = "=0.3.0" }
+#alloy-primitives = { version = "=0.6.4" }
+#revm-primitives = { version = "=3.1.0", default-features = false }
+
+reth-primitives = { git = "https://github.com/paradigmxyz/reth", tag = "v0.2.0-beta.9", default-features = false }
+
+
+[patch.crates-io]
+# This if for v0.2.0-beta.9
+revm = { git = "https://github.com/bluealloy/revm", rev = "a28a543" }
+revm-interpreter = { git = "https://github.com/bluealloy/revm", rev = "a28a543" }
+revm-precompile = { git = "https://github.com/bluealloy/revm", rev = "a28a543" }
+revm-primitives = { git = "https://github.com/bluealloy/revm", rev = "a28a543" }
