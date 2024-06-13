@@ -37,8 +37,6 @@ fn main() {
         bytecode_hash: None,
     };
 
-    let x = account.balance.to::<u64>();
-
     let signature = Signature {
         r: U256::from_str(
             "18515461264373351373200002665853028612451056578545711640558177340181847433846",

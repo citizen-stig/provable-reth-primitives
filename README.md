@@ -30,11 +30,7 @@ During development, faster iteration upon code changes can be achieved by levera
 Put together, the command to run your project in development mode while getting execution statistics is:
 
 ```bash
-RUST_LOG="[executor]=info" RISC0_DEV_MODE=1 cargo run
-```
-
-```bash
-BONSAI_API_KEY="YOUR_API_KEY" BONSAI_API_URL="BONSAI_URL" cargo run
+RUST_LOG="info" RISC0_DEV_MODE=1 cargo run
 ```
 
 ## How to create a project based on this template
