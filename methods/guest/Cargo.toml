@@ -37,6 +37,7 @@ reth-primitives = { git = "https://github.com/paradigmxyz/reth", tag = "v0.2.0-b
 
 # Patches for correct building of secp256k1 on risc0 architecture
 [patch.crates-io]
+# This is only for older versions
 secp256k1_v027 = { package = "secp256k1", version = "0.27", git = "https://github.com/Sovereign-Labs/rust-secp256k1.git", rev = "5f425f1223cfc7cd0cee61335268629659dc6007" }
 secp256k1_v028 = { package = "secp256k1", version = "0.28", git = "https://github.com/Sovereign-Labs/rust-secp256k1.git", rev = "c921ac680bc998c738d83adac4c916eb4b191094" }
 
