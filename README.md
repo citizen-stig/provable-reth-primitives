@@ -6,7 +6,16 @@
 This repo is based on RISC0 template with added [paradigm/reth-primitives](https://github.com/paradigmxyz/reth/tree/main/crates/primitives) as a dependency, 
 to show case that it can operate in risc0 ZK VM.
 
-in [`host/Cargo.toml`](./host/Cargo.toml) and [`methods/guest/Cargo.toml`](methods/guest/Cargo.toml) defined several versions of reth-primitives:
+Files [`host/Cargo.toml`](./host/Cargo.toml) and [`methods/guest/Cargo.toml`](methods/guest/Cargo.toml) defined several versions of reth-primitives:
+
+Main 2 are:
+
+* Active: [`reth rev 43c72b0`](https://github.com/paradigmxyz/reth/commit/43c72b022cea3068edbce794fa94adefb029fd06), which is provable. Steps from [Quick start](#quick-start) should just work. Last line of the output should be:
+```
+2024-06-14T09:13:22.909775Z  INFO host: Done. output=10015
+```
+* One of the latest [`reth v0.2.0-beta.9`](https://github.com/paradigmxyz/reth/tree/v0.2.0-beta.9). To activate it, do the following steps:
+   1.
 
  
 

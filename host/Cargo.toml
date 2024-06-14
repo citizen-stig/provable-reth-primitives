@@ -28,7 +28,7 @@ reth-primitives = { git = "https://github.com/paradigmxyz/reth", rev = "43c72b02
 alloy-trie = { version = "=0.3.0" }
 alloy-primitives = { version = "=0.6.4" }
 revm-primitives = { version = "=3.1.0", default-features = false }
-# End of upsteam
+# End of upsteam provable version
 
 # One of the latest
 #reth-primitives = { git = "https://github.com/paradigmxyz/reth", tag = "v0.2.0-beta.9", default-features = false }
