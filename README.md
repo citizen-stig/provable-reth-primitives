@@ -15,9 +15,27 @@ Main 2 are:
 2024-06-14T09:13:22.909775Z  INFO host: Done. output=10015
 ```
 * One of the latest [`reth v0.2.0-beta.9`](https://github.com/paradigmxyz/reth/tree/v0.2.0-beta.9). To activate it, do the following steps:
-   1.
-
+   1. Comment whole section related `reth-primitives` in [`host/Cargo.toml`](./host/Cargo.toml) and [`methods/guest/Cargo.toml`](methods/guest/Cargo.toml)
+   2. Uncomment `reth-primitives` with tag `reth v0.2.0-beta.9` in [`host/Cargo.toml`](./host/Cargo.toml) and [`methods/guest/Cargo.toml`](methods/guest/Cargo.toml)
+   3. Uncomment `patch.crates-io` section **in root [`Cargo.toml`](./Cargo.toml)** and [`methods/guest/Cargo.toml`](methods/guest/Cargo.toml)
+   4. Just to be sure run `cargo clean`
+   5. Execute steps from [Quick start](#quick-start). Or just `RUST_LOG="info" RISC0_DEV_MODE=1 cargo run` if quick start has been done before.
  
+
+`0.2.0-beta9` will probably fail, with something this:
+
+```
+reth_primitives_guest:    Compiling wait-timeout v0.2.0
+reth_primitives_guest: error[E0433]: failed to resolve: use of undeclared crate or module `imp`
+reth_primitives_guest:   --> /Users/nikolai/.cargo/registry/src/index.crates.io-6f17d22bba15001f/wait-timeout-0.2.0/src/lib.rs:66:9
+reth_primitives_guest:    |
+reth_primitives_guest: 66 |         imp::wait_timeout(self, dur)
+reth_primitives_guest:    |         ^^^ use of undeclared crate or module `imp`
+reth_primitives_guest:
+reth_primitives_guest: For more information about this error, try `rustc --explain E0433`.
+```
+
+Which is being addressed by https://github.com/paradigmxyz/reth/pull/8821 , but there might be other issues. 
 
 ## Quick Start
 
