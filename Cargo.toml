@@ -12,7 +12,7 @@ lto = true
 
 [patch.crates-io]
 ### This if for v0.2.0-beta.9
-revm = { git = "https://github.com/bluealloy/revm", rev = "a28a543" }
-revm-interpreter = { git = "https://github.com/bluealloy/revm", rev = "a28a543" }
-revm-precompile = { git = "https://github.com/bluealloy/revm", rev = "a28a543" }
-revm-primitives = { git = "https://github.com/bluealloy/revm", rev = "a28a543" }
+#revm = { git = "https://github.com/bluealloy/revm", rev = "a28a543" }
+#revm-interpreter = { git = "https://github.com/bluealloy/revm", rev = "a28a543" }
+#revm-precompile = { git = "https://github.com/bluealloy/revm", rev = "a28a543" }
+#revm-primitives = { git = "https://github.com/bluealloy/revm", rev = "a28a543" }

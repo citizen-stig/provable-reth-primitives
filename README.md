@@ -1,6 +1,17 @@
 # RISC0 provable reth-primitives
 
+
+## Overview
+
+This repo is based on RISC0 template with added [paradigm/reth-primitives](https://github.com/paradigmxyz/reth/tree/main/crates/primitives) as a dependency, 
+to show case that it can operate in risc0 ZK VM.
+
+in [`host/Cargo.toml`](./host/Cargo.toml) and [`methods/guest/Cargo.toml`](methods/guest/Cargo.toml) defined several versions of reth-primitives:
+
+ 
+
 ## Quick Start
+
 
 First, make sure [rustup] is installed. The
 [`rust-toolchain.toml`][rust-toolchain] file will be used by `cargo` to
@@ -18,6 +29,10 @@ command:
 RUST_LOG="info" RISC0_DEV_MODE=1 cargo run
 ```
 
+
+
+
+# Other
 
 ## Directory Structure
 
